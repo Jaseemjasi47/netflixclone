@@ -1,0 +1,340 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 30px 50px;
+    position: absolute;
+    width: 100%;
+    z-index: 5;
+}
+
+.mainbg {
+    background-color: #000000c7;
+}
+header .logo svg{
+    fill: #e50914;
+    height: 36px;
+}
+header div+div {
+    text-align: right;
+    padding-right: 5%;
+    
+}
+button{
+    background-color: #e50914;
+    color: #fff;
+    font-size: medium;
+    font-weight: 400;
+    text-decoration: none;
+    border: #e50914;
+    border-radius: 3px;
+    width: 85px;
+    height: 35px;
+}
+select{
+    
+    background: transparent;
+    font-size: 15;
+    color: #fff;
+    width: 100px;
+    height: 35px;
+    margin-right: 20px;
+    border-radius: 3px;
+    text-align: center;
+}
+header div.select{
+    display: inline-block;
+}
+header div.select svg{
+    height: 13px;
+    fill: #fff;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 5px;
+   
+
+}
+div.splash div.bg{
+    position: relative;
+}
+div.splash div.gradient{
+    background-image: linear-gradient(0deg,transparent 50%,rgba(0,0,0,.7)),radial-gradient(50% 100%,transparent 0,rgba(0,0,0,.7) 100%);
+    position: absolute;
+    inset: 0;
+}
+div.splash div.bg img{
+    max-width: 100%;
+    opacity: 0.7;
+    
+}
+div.splash div.content{
+    padding-top: 6%;
+    max-width: 655px;
+    position: absolute;
+    inset: 0;
+    left: 50%;
+    margin-left: -327.5px;
+    display: grid;
+    align-items: center;
+    text-align: center;
+}
+div.splash h1{
+    font-size: 3.125rem;
+}
+div.splash h4{
+    line-height: 80px;
+    font-weight: 100;
+    font-size: 1.625rem;
+}
+div.splash h6{
+    font-weight: 100;
+    font-size: 1.2rem;
+}
+div.splash form{
+    display: grid;
+    margin-top: 20px;
+    grid-template-columns: 1fr max-content;
+}
+div.splash input{
+    padding: 10px;
+    font-size: 1.2rem;
+}
+div.splash button{
+    
+    text-align: center;
+    width: 210px;
+    height: 60px;
+    font-size: 27px;
+    
+}
+section{
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr;
+    gap: 46px;
+    
+    padding: 70px 35px;
+    align-items: center;
+    border-top: 8px solid #222;
+}
+section div.texts h1{
+    font-size: 3.125rem;
+    margin-bottom: 10px;
+}
+section div.texts p{
+    font-size: 1.625rem;
+}
+.media{
+    
+    position: relative;
+    
+}
+
+.media.s1 video{
+    width: 365px;
+    top: 78px;
+    left: 65px;
+    z-index: -1;
+    position: absolute;
+}
+.media.s1 img{
+    width: 500px;   
+}
+
+section:nth-child(even) div.texts {
+    order: 2;
+}
+section div.download{
+    border: 2px solid #888;
+    border-radius: 15px;
+    padding: 10px;
+    padding-right: 10px;
+    height: 25%;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    bottom: 30px;
+    width: 58%;
+    left:20%;
+    background-color: #000;
+    gap: 15px;
+    grid-template-columns: max-content 1fr max-content;
+}
+
+section div.download img{
+    height: 75px;
+    width: auto;
+}
+
+.media.s3 video{
+    width: 310px;
+    top: 30px;
+    left: 95px;
+    z-index: -1;
+    position: absolute;
+}
+.media.s3 img{
+    width: 500px;   
+}
+.last{
+    border-bottom: 8px solid #222;
+}
+div.faq{
+    padding: 70px 30px;
+}
+div.faq h1{
+    font-size: 3.125rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+div.questions{
+    max-width: 820px;
+    margin: 0 auto;
+    font-size: 1.625rem;
+}
+div.question{
+    position: relative;
+    
+    background-color: #303030;
+    margin-bottom: 10px;
+}
+div.question svg{
+    width: 40px;
+    height: 30px;
+    right: 10px;
+    top: 20px;
+    position: absolute;
+    transform: rotate(45deg);
+    transition: all 0.2s ease;
+}
+div.question .header{
+    display: block;
+    padding: 20px 30px;
+    border-bottom: 1px solid #000;
+    cursor: pointer;
+}
+div.question div.answer{
+    padding: 0 30px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+div.question input[type="checkbox"]{
+    display: none;
+}
+div.question input[type="checkbox"]:checked ~ div.answer{
+    padding: 30px;
+    max-height: 800px;
+}
+div.question input[type="checkbox"]:checked ~ .header svg{
+    transform: rotate(0deg);
+}
+div.faq h6{
+    text-align: center;
+    margin-top: 70px;
+    font-weight: 100;
+    font-size: 1.2rem;
+}
+div.faq form{
+    display: grid;
+    margin-top: 20px;
+    margin-left: 23%;
+    grid-template-columns: .62fr max-content;
+}
+div.faq input{
+    padding: 10px;
+    font-size: 1.2rem;
+}
+div.faq button{
+    
+    text-align: center;
+    width: 210px;
+    height: 60px;
+    font-size: 27px;
+    
+}
+.end{
+    color: rgb(124, 123, 123);
+    border-top: 8px solid #222;
+    font-size: small;
+}
+.lastsec{
+    padding: 5% 15%;
+    
+}
+.fst{
+    margin-bottom: 30px;
+    font-size: 17px;
+}
+.sec1{
+    cursor: pointer;
+    line-height: 35px;
+    font-size: 13px;
+    margin-left: 0%;
+}
+.sec2{
+    position: absolute;
+    cursor: pointer;
+    line-height: 35px;
+    font-size: 13px;
+    margin-top: -140px;
+    margin-left: 17%;
+    
+}
+div.sec3{
+    position: absolute;
+    cursor: pointer;
+    line-height: 35px;
+    font-size: 13px;
+    margin-top: -140px;
+    margin-left: 33%;
+    
+}
+div.sec4{
+    position: absolute;
+    cursor: pointer;
+    line-height: 35px;
+    font-size: 13px;
+    margin-top: -140px;
+    margin-left: 50%;
+    
+}
+.eselect{
+
+    margin: 20px 0;
+    position: absolute;
+    
+}
+.eselect select{
+    width: 140px;
+    height: 55px;
+    margin-bottom: 30px;
+    text-align: right;
+    padding-right: 20px;
+    font-weight: bolder;
+}
+div.eselect svg{
+    height: 16px;
+    fill: rgb(124, 123, 123);
+    position: absolute;
+    margin-top: 18px;
+    margin-left: 15px;
+    
+}
+.ni{
+    position: absolute;
+    margin-top: 100px;
+    padding-bottom: 30px;
+}
